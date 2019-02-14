@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+light -S 1;
+amixer sset Master 23% > /dev/null

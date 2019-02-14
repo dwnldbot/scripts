@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+#
+# poweroff with timer and remaining minutes
+
+print_remaining() {
+    local remainingminutes=${1}
+    printf "~ %s min remaining" ${remainingminutes}
+}
+
+clean_line() {
+    printf "\r"
+}
+
+minute-countdown() {
+    local duration=${1}
+
+    for (( i=duration; i > 0; i=i-1)); do
+        print_remaining ${i}
+        sleep 1m
+        clean_line
+    done
+}
+
+if [[ $# -eq 0 ]]; then
+    echo "please enter minutes until poweroff"
+    exit 0
+fi
+
+minute-countdown $1
+systemctl poweroff

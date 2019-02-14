@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+echo "Download newest build for device"
+read
+echo "Put device into debug mode by checking "Android debugging" box und the Developer Options in settings"
+read
+echo "Connect phone to computer via usb"
+read
+echo "Reboot phone into recovery mode: Press HOME + VOLUME UP + POWER"
+read
+echo "Starting adb server with root permissions and listing connected devices:"
+sudo adb devices
+echo "Is device showing up? If yes, then continue"
+read
+echo "Enter path for build file:"
+read path
+adb sideload $path

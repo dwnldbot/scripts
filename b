@@ -2,9 +2,7 @@
 #
 # change master volume
 
-if [[ $# -eq 0 ]] ; then
-    light
-fi
+test -z $1 && light -G
 
 if [[ $1 = 'u' ]]; then
     light -A 5

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if [[ $# == 0 ]]; then
+    echo "Please provide an argument: \'off\' for turning wifi off or an interface name to start"
+    exit 1
+fi
+
+if [[ $1 == "off" ]]; then
+    netctl stop-all
+else
+    netctl start $1
+fi

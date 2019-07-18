@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# convert DjVu -> PDF
+# usage:  djvu2pdf <file.djvu>
+
+i="$1"
+echo "------------ converting $i to PDF ----------------";
+o="`basename $i .djvu`"
+o="$o".pdf
+echo "[ writing output to $o ] "
+
+cmd="ddjvu -format=pdf -quality=85 -verbose $i $o "
+$cmd

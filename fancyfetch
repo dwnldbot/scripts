@@ -13,11 +13,11 @@ NOC='\033[0m'
 
 printf "        ▄▄▄         \n"
 printf "     ▄███▓██▌       \n"
-printf " ▐███████████▄      "; printf "${RED}os: ${NOC}arch\n"
+printf " ▐███████████▄      "; printf "${RED}os: ${NOC}freebsd\n"
 printf "▐▓▓▀ ████████▓      "; printf "${GRN}wm: ${NOC}wmutils\n"
 printf "     ▐▒▄▄           "; printf "${YLW}term: ${NOC}st\n"
 printf "         █▀         "; printf "${BLU}sh: ${NOC}bash\n"
-printf "       ▄██          "; printf "${MAG}font: ${NOC}Inconsolata\n"
+printf "       ▄██          "; printf "${MAG}font: ${NOC}scientifica\n"
 printf "   ▐▒░░░▒░░░░       \n"
 printf "░░░░░▒▒▒▒▒▒░░░░"
 
